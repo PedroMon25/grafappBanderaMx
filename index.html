@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bandera de México | Control RGB</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-decoration decoration-green"></div>
+    <div class="background-decoration decoration-red"></div>
+
+    <header class="header">
+
+        <div class="header-content">
+
+            <div class="mexico-icon">
+                🇲🇽
+            </div>
+
+            <div>
+
+                <span class="career">
+                    INGENIERÍA EN SISTEMAS COMPUTACIONALES
+                </span>
+
+                <h1>
+                    Bandera de México
+                </h1>
+
+                <p>
+                    Práctica integradora · Control interactivo de colores RGB
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="main-container">
+
+        <section class="intro">
+
+            <span class="badge">
+                GRAFICACIÓN · PRÁCTICA 1.4
+            </span>
+
+            <h2>
+                Explora los colores de nuestra bandera
+            </h2>
+
+            <p>
+                Modifica los colores verde y rojo mediante controles RGB,
+                código hexadecimal o el selector visual.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             CONTROLES DE COLOR
+        ========================== -->
+
+        <section class="controls-section">
+
+            <!-- CONTROL VERDE -->
+
+            <article class="color-control green-panel">
+
+                <div class="panel-header">
+
+                    <div class="panel-title">
+
+                        <span
+                            class="color-dot"
+                            id="greenPreview"
+                        ></span>
+
+                        <div>
+
+                            <strong>
+                                Verde
+                            </strong>
+
+                            <small>
+                                Franja izquierda
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <input
+                        type="color"
+                        id="greenColorPicker"
+                        value="#006847"
+                        title="Selector de color verde"
+                    >
+
+                </div>
+
+
+                <div class="rgb-sliders">
+
+                    <div class="slider-control">
+
+                        <label>
+                            <span>R</span>
+                            <span id="greenRValue">0</span>
+                        </label>
+
+                        <input
+                            type="range"
+                            id="greenR"
+                            min="0"
+                            max="255"
+                            value="0"
+                        >
+
+                    </div>
+
+
+                    <div class="slider-control">
+
+                        <label>
+                            <span>G</span>
+                            <span id="greenGValue">104</span>
+                        </label>
+
+                        <input
+                            type="range"
+                            id="greenG"
+                            min="0"
+                            max="255"
+                            value="104"
+                        >
+
+                    </div>
+
+
+                    <div class="slider-control">
+
+                        <label>
+                            <span>B</span>
+                            <span id="greenBValue">71</span>
+                        </label>
+
+                        <input
+                            type="range"
+                            id="greenB"
+                            min="0"
+                            max="255"
+                            value="71"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="color-values">
+
+                    <div class="code-input">
+
+                        <span>HEX</span>
+
+                        <input
+                            type="text"
+                            id="greenHex"
+                            value="#006847"
+                            maxlength="7"
+                        >
+
+                    </div>
+
+
+                    <div class="code-input">
+
+                        <span>RGB</span>
+
+                        <input
+                            type="text"
+                            id="greenRGB"
+                            value="0, 104, 71"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="restore-button"
+                    id="resetGreen"
+                >
+                    Restaurar verde
+                </button>
+
+            </article>
+
+
+            <!-- CONTROL ROJO -->
+
+            <article class="color-control red-panel">
+
+                <div class="panel-header">
+
+                    <div class="panel-title">
+
+                        <span
+                            class="color-dot"
+                            id="redPreview"
+                        ></span>
+
+                        <div>
+
+                            <strong>
+                                Rojo
+                            </strong>
+
+                            <small>
+                                Franja derecha
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <input
+                        type="color"
+                        id="redColorPicker"
+                        value="#CE1126"
+                        title="Selector de color rojo"
+                    >
+
+                </div>
+
+
+                <div class="rgb-sliders">
+
+                    <div class="slider-control">
+
+                        <label>
+                            <span>R</span>
+                            <span id="redRValue">206</span>
+                        </label>
+
+                        <input
+                            type="range"
+                            id="redR"
+                            min="0"
+                            max="255"
+                            value="206"
+                        >
+
+                    </div>
+
+
+                    <div class="slider-control">
+
+                        <label>
+                            <span>G</span>
+                            <span id="redGValue">17</span>
+                        </label>
+
+                        <input
+                            type="range"
+                            id="redG"
+                            min="0"
+                            max="255"
+                            value="17"
+                        >
+
+                    </div>
+
+
+                    <div class="slider-control">
+
+                        <label>
+                            <span>B</span>
+                            <span id="redBValue">38</span>
+                        </label>
+
+                        <input
+                            type="range"
+                            id="redB"
+                            min="0"
+                            max="255"
+                            value="38"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="color-values">
+
+                    <div class="code-input">
+
+                        <span>HEX</span>
+
+                        <input
+                            type="text"
+                            id="redHex"
+                            value="#CE1126"
+                            maxlength="7"
+                        >
+
+                    </div>
+
+
+                    <div class="code-input">
+
+                        <span>RGB</span>
+
+                        <input
+                            type="text"
+                            id="redRGB"
+                            value="206, 17, 38"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="restore-button"
+                    id="resetRed"
+                >
+                    Restaurar rojo
+                </button>
+
+            </article>
+
+        </section>
+
+
+        <!-- =========================
+             BANDERA
+        ========================== -->
+
+        <section class="flag-section">
+
+            <div
+                class="flag"
+                id="mexicanFlag"
+            >
+
+                <div
+                    class="flag-stripe stripe-green"
+                    id="greenStripe"
+                ></div>
+
+
+                <div class="flag-stripe stripe-white">
+
+                    <div class="coat-of-arms">
+
+                        <img
+                            src="bandera-mexico.png"
+                            alt="Escudo Nacional de México"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="flag-stripe stripe-red"
+                    id="redStripe"
+                ></div>
+
+            </div>
+
+
+            <div class="flag-help">
+
+                <span>🎨</span>
+
+                <p>
+                    Los cambios realizados en los controles se reflejan
+                    automáticamente en la bandera.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INTEGRANTES
+        ========================== -->
+
+        <section class="team-section">
+
+            <div class="section-heading">
+
+                <span></span>
+
+                <h3>
+                    Integrantes del equipo
+                </h3>
+
+                <span></span>
+
+            </div>
+
+
+            <div class="team-members">
+
+                <article class="member">
+
+                    <div class="member-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Montalbo Castro Pedro Carlos
+                        </strong>
+
+                        <small>
+                            No. de control 24200096
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <article class="member">
+
+                    <div class="member-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Reyes Alvarez Octavio Armando
+                        </strong>
+
+                        <small>
+                            No. de control 24200223
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <article class="member">
+
+                    <div class="member-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Velazquez Tellez Pablo Horacio
+                        </strong>
+
+                        <small>
+                            No. de control 24200102
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HIMNO
+        ========================== -->
+
+        <section class="anthem-section">
+
+            <div class="anthem-title">
+
+                <span class="music-symbol">
+                    ♪
+                </span>
+
+                <div>
+
+                    <small>
+                        IDENTIDAD NACIONAL
+                    </small>
+
+                    <h3>
+                        Himno Nacional Mexicano
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="anthem-button"
+                id="anthemButton"
+            >
+
+                <span
+                    class="play-icon"
+                    id="anthemIcon"
+                >
+                    ▶
+                </span>
+
+                <span id="anthemText">
+                    Reproducir
+                </span>
+
+            </button>
+
+
+            <audio
+                id="anthemAudio"
+                src="himno-nacional.mp3"
+                preload="metadata"
+            ></audio>
+
+
+            <div
+                class="lyrics-area"
+                id="lyricsArea"
+            >
+
+                <p
+                    class="lyric-current"
+                    id="currentLyric"
+                ></p>
+
+                <p
+                    class="lyric-next"
+                    id="nextLyric"
+                ></p>
+
+                <p
+                    class="lyric-next second-next"
+                    id="secondNextLyric"
+                ></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Práctica integradora 1.4 · Graficación
+        </p>
+
+        <span>
+            M.T.I. Luis Alejandro Santana Valadez
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
